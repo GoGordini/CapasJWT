@@ -63,7 +63,7 @@ const initializePassport = () => {
     //Implementación de nuestro mecanismo de autenticación con github
     passport.use('github', new GitHubStrategy({ //los 3 primeros parámetros salen de la app de git.
         clientID: 'Iv1.e0b3de4024dcd9c8',
-        clientSecret: 'e425d65adad822a637381bac2342a9290f734eb6',
+        clientSecret: configs.gitHubClientSecret,
         callbackURL: 'http://localhost:8080/api/sessions/github-callback',
         scope: ['user:email'] //esto trae del usuario el email, con los que me estoy logueando en github.
     }, async (accessToken, refreshToken, profile, done) => { //los dos primeros por ahora no los uso, son para JWT.

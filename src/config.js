@@ -18,6 +18,7 @@ const configs = {
     mailAdmin: process.env.MAIL_ADMIN,
     passAdmin: process.env.PASS_ADMIN,
     privateKeyJWT: process.env.PRIVATE_KEY_JWT,
+    gitHubClientSecret:process.env.GITHUB_CLIENT_SECRET
 };
 
 export default configs;
